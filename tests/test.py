@@ -17,14 +17,14 @@ class AuthTest(unittest.TestCase):
 
     def register_user(self, name, email, username, password, confirm_password):
         self.browser.get("http://localhost/quiz-pengupil/register.php")
-        time.sleep(2)
-        self.browser.find_element(By.NAME, "name").send_keys(name)
-        self.browser.find_element(By.NAME, "email").send_keys(email)
-        self.browser.find_element(By.NAME, "username").send_keys(username)
-        self.browser.find_element(By.NAME, "password").send_keys(password)
-        self.browser.find_element(By.NAME, "confirm_password").send_keys(confirm_password)
-        self.browser.find_element(By.NAME, "submit").click()
-        time.sleep(2)
+        time.sleep(5)
+        self.browser.find_element(By.NAME, "Nama").send_keys(name)
+        self.browser.find_element(By.NAME, "Alamat Email").send_keys(email)
+        self.browser.find_element(By.NAME, "Username").send_keys(username)
+        self.browser.find_element(By.NAME, "Password").send_keys(password)
+        self.browser.find_element(By.NAME, "Re-Password").send_keys(confirm_password)
+        self.browser.find_element(By.NAME, "Register").click()
+        time.sleep(5)
     
     def test_register_valid(self):
         self.register_user("Yusuf", "yusuf@email.com", "PelancongAngkasa", "Admin1234", "Admin1234")
@@ -48,11 +48,11 @@ class AuthTest(unittest.TestCase):
     
     def login_user(self, username, password):
         self.browser.get("http://localhost/quiz-pengupil/login.php")
-        time.sleep(2)
+        time.sleep(5)
         self.browser.find_element(By.NAME, "username").send_keys(username)
         self.browser.find_element(By.NAME, "password").send_keys(password)
         self.browser.find_element(By.NAME, "submit").click()
-        time.sleep(2)
+        time.sleep(5)
     
     def test_login_valid(self):
         self.login_user("PelancongAngkasa", "Admin1234")
