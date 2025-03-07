@@ -1,10 +1,11 @@
-  name: Quiz Testing 
-  on: 
-    push: 
-      branches: 
-        - main 
+name: Quiz Testing 
 
-  jobs:
+on: 
+  push: 
+    branches: 
+      - main 
+
+jobs:
   selenium-test:
     runs-on: ubuntu-latest
 
