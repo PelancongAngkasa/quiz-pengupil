@@ -3,5 +3,5 @@ Workdir /var/www/html
 
 COPY ./ ./
 RUN rm -rf .git/*
-RUN rm- rf .github/*
+RUN rm -rf .github/*
 EXPOSE 80
